@@ -1,10 +1,6 @@
-
-const Navbar = ({toggleDarkMode}) => {
-
-
+const Navbar = () => {
     return ( 
         <nav className="navbar">
-            <h1>JAMS Garage Doors</h1>
             <div className="links">
                 <a href="/">home</a>
                 <a href="/contact">contact</a>
@@ -14,7 +10,6 @@ const Navbar = ({toggleDarkMode}) => {
                     backgroundColor: "#e0842e",
                     borderRadius: "8px" 
                 }}>estimate</a>
-                <button onClick={toggleDarkMode}>Dark Mode</button>
             </div>
         </nav>
      );

@@ -1,25 +1,20 @@
 import Navbar from './Navbar';
 import Home from './Home';
-import { useState } from 'react';
+import Header from './Header';
+import ServiceCall from './ServiceCall';
+import Footer from './Form';
 function App() {
 
-
-    const [isDark, toggleDark] = useState(false);
-
-    const toggleDarkMode = () => {
-        toggleDark(!isDark);
-    }
-
-
   return (
-    <div className={`App ${isDark ? 'darkMode' : ''}`}>
-        <Navbar toggleDarkMode={toggleDarkMode}/>
+    <div className={`App`}>
+        <Header />
+        <Navbar />
       <div className="content">
-        <Home />
+        <ServiceCall />
       </div>
+        <Footer />
     </div> 
   );
-
 }
 
 export default App;
