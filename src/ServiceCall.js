@@ -16,7 +16,9 @@ const Form = () => {
   const [consentToMarketingEmails, setConsentToMarketingEmails] = useState(false);
 
   return (
-    <form>
+    <form className="Service">
+
+      <h1>Personal information</h1>
       <select value={prefix} onChange={(e) => setPrefix(e.target.value)}>
         <option value="mr">Mr</option>
         <option value="mrs">Mrs</option>
@@ -24,6 +26,9 @@ const Form = () => {
       </select>
       <input value={firstName} onChange={(e) => setFirstName(e.target.value)} placeholder="First Name" />
       <input value={lastName} onChange={(e) => setLastName(e.target.value)} placeholder="Last Name" />
+      <br />
+
+      <h1>Address</h1>
       <input value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Address" />
       <input value={city} onChange={(e) => setCity(e.target.value)} placeholder="City" />
       <select value={province} onChange={(e) => setProvince(e.target.value)}>
@@ -36,6 +41,9 @@ const Form = () => {
       </select>
       <input value={zipCode} onChange={(e) => setZipCode(e.target.value)} placeholder="Zip Code" />
       <input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone" />
+      <br />
+
+      <h1>Contact info</h1>
       <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
       <input type="date" value={serviceDate} onChange={(e) => setServiceDate(e.target.value)} />
       <input type="time" value={serviceTime} onChange={(e) => setServiceTime(e.target.value)} />
@@ -47,6 +55,7 @@ const Form = () => {
         Consent to receive marketing emails and such
         <input type="checkbox" checked={consentToMarketingEmails} onChange={(e) => setConsentToMarketingEmails(e.target.checked)} />
       </label>
+      <button type="submit">Submit</button>
     </form>
   );
 };

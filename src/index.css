@@ -61,14 +61,14 @@
   padding: 20px;
 }
 
-.service-call-form {
+.Service {
   display: flex;
+  gap: 20px;
   flex-direction: column;
-  gap: 1rem; /* Adjust the value as per your preference */
 }
 
-.service-call-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem; /* Adjust the value as per your preference */
-};
+.Service h1 {
+  color: #e0842e;
+  justify-content: left;
+  flex: 1;
+}
