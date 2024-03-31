@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 
 const Form = () => {
+
+  // TODO: Add validation
+  // TODO: Add error handling
+  // TODO: Add success message
+  // TODO: send to database
+
   const [prefix, setPrefix] = useState('');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -13,6 +19,7 @@ const Form = () => {
   const [serviceDate, setServiceDate] = useState('');
   const [serviceTime, setServiceTime] = useState('');
   const [isHomeAtServiceTime, setIsHomeAtServiceTime] = useState(false);
+  const [problemDescription, setProblemDescription] = useState('');
   const [consentToMarketingEmails, setConsentToMarketingEmails] = useState(false);
 
   return (
@@ -57,6 +64,12 @@ const Form = () => {
         Will you be home at the time of service?
         <input type="checkbox" checked={isHomeAtServiceTime} onChange={(e) => setIsHomeAtServiceTime(e.target.checked)} />
       </label>
+      <textarea 
+        onChange={(e) => setProblemDescription(e.target.value)} 
+        placeholder="Describe your problem here" 
+        rows={5} 
+        cols={50} 
+      />
       <label>
         Consent to receive marketing emails and such
         <input type="checkbox" checked={consentToMarketingEmails} onChange={(e) => setConsentToMarketingEmails(e.target.checked)} />
