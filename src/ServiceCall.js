@@ -46,7 +46,13 @@ const Form = () => {
       <h1>Contact info</h1>
       <input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
       <input type="date" value={serviceDate} onChange={(e) => setServiceDate(e.target.value)} />
-      <input type="time" value={serviceTime} onChange={(e) => setServiceTime(e.target.value)} />
+      <p>Prefered time of service:</p>
+      <div className="time-of-day">
+        <p>
+          AM: <input type="radio" name="time"  onChange={() => setServiceTime("AM")} />
+          PM: <input type="radio" name="time"  onChange={() => setServiceTime("PM")} />
+        </p>
+      </div>
       <label>
         Will you be home at the time of service?
         <input type="checkbox" checked={isHomeAtServiceTime} onChange={(e) => setIsHomeAtServiceTime(e.target.checked)} />

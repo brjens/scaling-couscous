@@ -72,3 +72,15 @@
   justify-content: left;
   flex: 1;
 }
+
+.time-of-day {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-right: 10px;
+}
+
+.time-of-day input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
