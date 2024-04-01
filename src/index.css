@@ -93,3 +93,23 @@ textarea {
 .label-consent {
   margin-top: 20px;
 }
+
+.footer {
+  color: #888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px 0;
+  background-color: #e0842e;
+  display: flex;
+  flex-direction: column;
+}
+
+.topFooter {
+  display: flex;
+  flex-direction: row;
+}
+
+.social-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}

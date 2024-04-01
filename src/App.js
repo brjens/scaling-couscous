@@ -2,7 +2,7 @@ import Navbar from './Navbar';
 import Home from './Home';
 import Header from './Header';
 import ServiceCall from './ServiceCall';
-import Footer from './Form';
+import Footer from './Footer';
 function App() {
   let content = <Home />;
 
