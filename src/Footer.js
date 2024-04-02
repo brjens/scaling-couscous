@@ -12,11 +12,18 @@ const Footer = () => {
                 <a href='https://www.linkedin.com'><FontAwesomeIcon icon={faLinkedin} className='social-icon'/></a>
             </div>
             <div className="contactLists">
-                <p>connect with us</p>
+                <p style={{marginBottom: "10px", fontWeight: "bold"}}>connect with us</p>
                 <p>address</p>
                 <p>phone</p>
                 <p>toll-free phone</p>
                 <p>email</p>
+           </div>
+           <div className="hoursOfOporation">
+               <p style={{marginBottom: "10px", fontWeight: "bold"}}>hours of operation</p>
+               <p>monday - friday</p>
+               <p>9am - 5pm</p>
+               <p>weekends</p>
+               <p>closed</p>
            </div>
         </div>
         <div className="bottomFooter">

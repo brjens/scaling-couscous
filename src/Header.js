@@ -1,3 +1,4 @@
+import Reviews from './Reviews';
 const Header = () => {
     return ( 
         <header className="header">
@@ -11,7 +12,11 @@ const Header = () => {
                     <p>Toll Free Number</p>
                     <p>1-(800) 555-5555</p>
                 </div>
-
+            </div>
+            <div className="reviews">
+                <p>Average Reviews</p>
+                <p>0</p>
+                <Reviews />
             </div>
         </header>
      );

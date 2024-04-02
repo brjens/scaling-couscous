@@ -16,15 +16,16 @@
   color: #e0842e;
   align-items: left;
   padding-left: 40px;
+  padding: auto;
 }
 
 .numbers {
-  margin: auto;
   align-items: right;
-  padding-right: 40px;
+  padding: 20px;
   size : 40px;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
 }
 
 .phone,
@@ -38,7 +39,7 @@
   align-items: center;
   max-width: 600px;
   margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
 }
 
 .navbar .links {
@@ -96,9 +97,9 @@ textarea {
 
 .footer {
   color: #888;
-  border-top: 1px solid #eeeeee;
-  margin-top: 16px;
-  padding: 16px 0;
+  border-top: 2px solid #eeeeee;
+  margin: auto;
+  padding: 16px;
   background-color: #e0842e;
   display: flex;
   flex-direction: column;
@@ -107,9 +108,31 @@ textarea {
 .topFooter {
   display: flex;
   flex-direction: row;
+  align-items: center;
+}
+
+.bottomFooter {
+  align-items: center;
+  margin-top: 10px;
 }
 
 .social-icon {
   margin-right: 10px;
   font-size: 24px;
+}
+
+.reviews {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.reviews .stars {
+  font-size: 24px;
+}
+
+.contactLists {
+  margin-left: 40px;
+  margin-right: 40px;
 }
