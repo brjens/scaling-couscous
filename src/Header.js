@@ -14,8 +14,6 @@ const Header = () => {
                 </div>
             </div>
             <div className="reviews">
-                <p>Average Reviews</p>
-                <p>0</p>
                 <Reviews />
             </div>
         </header>
