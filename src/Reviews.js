@@ -1,39 +1,22 @@
 import { useEffect, useState } from "react";
+import useFetch from "./useFetch";
 
 const Reviews = () => {
 
 //add a function to find the average review
 const [averageRating, setAveragerating] = useState(0);
 const [reviews, setReviews] = useState([]);
-const [error, setError] = useState(null);
-const [loading, setLoading] = useState(true);
+const { data, loading, error } = useFetch('http://localhost:3001/reviews');
 
 useEffect(() => {
-    setTimeout(() => {
-        fetch('http://localhost:3001/reviews')
-        .then(res => {
-            if (!res.ok) {
-                throw Error('could not fetch the data for that resource');
-            }
-        return res.json();
-        })
-        .then(data => {
-            console.log(data);
-            setReviews(data);
-            setLoading(false);
-            setError(null);
-        })
-        .catch(error => {
-            setLoading(false);
-            setError(error);
-        })
-    }, 2000);
-}, []);
-
-useEffect(() => {
-    setAveragerating(average(reviews));
-}, [reviews]);
+    if (data){
+        setReviews(data);
+        setAveragerating(average(reviews));
+    }
+}, [data]);
 const average = (reviews) => {
+    if (reviews.length === 0) return 0;
+    console.log(reviews);
     let sum = 0;
     for (let i = 0; i < reviews.length; i++) {
         sum += reviews[i].stars;
