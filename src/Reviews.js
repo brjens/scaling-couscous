@@ -5,18 +5,23 @@ const Reviews = () => {
 //add a function to find the average review
 const [averageRating, setAveragerating] = useState(0);
 const [reviews, setReviews] = useState([]);
+const [error, setError] = useState(null);
 
 useEffect(() => {
     fetch('http://localhost:3001/reviews')
     .then(res => {
+        if (!res.ok) {
+            throw Error('could not fetch the data for that resource');
+        }
        return res.json();
     })
     .then(data => {
         console.log(data);
         setReviews(data);
-        console.log(data); // Move the console.log here
         setAveragerating(average(data));
-        console.log(average(data)); // Move the console.log here
+    })
+    .catch(error => {
+        setError(error);
     })
 }, []);
 
@@ -50,6 +55,7 @@ const StarRating = ({ rating }) => {
 return ( 
     <nav>
     {/* Display the number of reviews */}
+        {error && <div>{error.message}</div>}
         <p> Reviews: {numOfReviews(reviews)} </p>
     {/* Display the StarRating component with the average rating */}
         <StarRating rating={averageRating} />
