@@ -6,22 +6,28 @@ const Reviews = () => {
 const [averageRating, setAveragerating] = useState(0);
 const [reviews, setReviews] = useState([]);
 const [error, setError] = useState(null);
+const [loading, setLoading] = useState(true);
 
 useEffect(() => {
-    fetch('http://localhost:3001/reviews')
-    .then(res => {
-        if (!res.ok) {
-            throw Error('could not fetch the data for that resource');
-        }
-       return res.json();
-    })
-    .then(data => {
-        console.log(data);
-        setReviews(data);
-    })
-    .catch(error => {
-        setError(error);
-    })
+    setTimeout(() => {
+        fetch('http://localhost:3001/reviews')
+        .then(res => {
+            if (!res.ok) {
+                throw Error('could not fetch the data for that resource');
+            }
+        return res.json();
+        })
+        .then(data => {
+            console.log(data);
+            setReviews(data);
+            setLoading(false);
+            setError(null);
+        })
+        .catch(error => {
+            setLoading(false);
+            setError(error);
+        })
+    }, 2000);
 }, []);
 
 useEffect(() => {
@@ -58,7 +64,7 @@ return (
     <nav>
     {/* Display the number of reviews */}
         {error && <div>{error.message}</div>}
-        <p> Reviews: {numOfReviews(reviews)} </p>
+        {loading ? (<p> Loading...</p>) : (<p>Reviews: {numOfReviews(reviews)}</p>)}
     {/* Display the StarRating component with the average rating */}
         <StarRating rating={averageRating} />
     </nav>
