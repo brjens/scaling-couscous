@@ -18,13 +18,15 @@ useEffect(() => {
     .then(data => {
         console.log(data);
         setReviews(data);
-        setAveragerating(average(data));
     })
     .catch(error => {
         setError(error);
     })
 }, []);
 
+useEffect(() => {
+    setAveragerating(average(reviews));
+}, [reviews]);
 const average = (reviews) => {
     let sum = 0;
     for (let i = 0; i < reviews.length; i++) {
