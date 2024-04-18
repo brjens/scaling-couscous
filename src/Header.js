@@ -1,4 +1,4 @@
-import Reviews from './Reviews';
+import ReviewCalculator from './ReviewCalculator';
 const Header = () => {
     return ( 
         <header className="header">
@@ -14,7 +14,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="reviews">
-                <Reviews />
+                <ReviewCalculator />
             </div>
         </header>
      );

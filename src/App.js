@@ -3,6 +3,7 @@ import Home from './Home';
 import Header from './Header';
 import ServiceCall from './ServiceCall';
 import Footer from './Footer';
+import Reviews from './Reviews';
 function App() {
   let content = <Home />;
 
@@ -23,6 +24,10 @@ function App() {
   if(window.location.pathname === '/estimate') {
     // TODO: Add Estimate and uncomment below
     // content = <Estimate />;
+  }
+
+  if(window.location.pathname === '/reviews') {
+    content = <Reviews />;
   }
   return (
     <div className={`App`}>
