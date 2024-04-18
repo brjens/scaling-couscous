@@ -4,6 +4,7 @@ import Header from './Header';
 import ServiceCall from './ServiceCall';
 import Footer from './Footer';
 import Reviews from './Reviews';
+import AddReviews from './AddReviews';
 function App() {
   let content = <Home />;
 
@@ -28,6 +29,9 @@ function App() {
 
   if(window.location.pathname === '/reviews') {
     content = <Reviews />;
+  }
+  if(window.location.pathname === '/addReviews') {
+    content = <AddReviews />;
   }
   return (
     <div className={`App`}>
