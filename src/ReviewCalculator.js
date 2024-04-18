@@ -15,10 +15,10 @@ useEffect(() => {
     }
 }, [data]);
 
-
 const handleButtonClick = (event) => {        
     window.location.href = event.target.href;
 }
+
 const average = (reviews) => {
     if (reviews.length === 0) return 0;
     console.log(reviews);
@@ -36,6 +36,7 @@ const numOfReviews = (reviews) => {
        </a>
     );
 }
+
 const Star = ({ filled }) => {
     return (
         <span style={{ color: filled ? 'gold' : 'lightgrey' }}>
