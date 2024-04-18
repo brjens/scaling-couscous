@@ -25,7 +25,11 @@ const average = (reviews) => {
 }
 
 const numOfReviews = (reviews) => {
-    return reviews.length;
+    return (
+       <a href="">
+        {reviews.length}
+       </a>
+    );
 }
 const Star = ({ filled }) => {
     return (
