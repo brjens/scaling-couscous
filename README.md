@@ -10,5 +10,4 @@ Need to fill out all the pages, add bootstrap, bring over product images and add
 
 ## Screenshots
 ### Home
-![image](https://github.com/brjens/scaling-couscous/assets/66975848/bb942db0-b24f-4c93-a50c-0e9848e4efa2)
-
+![image](https://github.com/brjens/scaling-couscous/assets/66975848/e5252f18-a98a-436d-b7d8-69de6b6185b8)
