@@ -1,3 +1,4 @@
+import { CircularProgress } from '@mui/material'; 
 import { useEffect, useState } from "react";
 import useFetch from "./useFetch";
 
@@ -54,12 +55,15 @@ const StarRating = ({ rating }) => {
 };
 
 return ( 
-    <nav>
-    {/* Display the number of reviews */}
-        {error && <div>{error.message}</div>}
-        {loading ? (<p> Loading...</p>) : (<p>Reviews: {numOfReviews(reviews)}</p>)}
-    {/* Display the StarRating component with the average rating */}
-        <StarRating rating={averageRating} />
+   <nav>
+            {loading && <CircularProgress />}
+            {!loading && (
+                <>
+                    {error && <div>{error.message}</div>}
+                    <p>Reviews: {numOfReviews(reviews)}</p>
+                    <StarRating rating={averageRating} />
+                </>
+            )}
     </nav>
      );
 }

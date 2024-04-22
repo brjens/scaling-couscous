@@ -5,6 +5,7 @@ import ServiceCall from './ServiceCall';
 import Footer from './Footer';
 import Reviews from './Reviews';
 import AddReviews from './AddReviews';
+import Faq from './Faq';
 function App() {
   let content = <Home />;
 
@@ -38,7 +39,8 @@ function App() {
         <Header />
         <Navbar />
       <div className="content">
-      {content}
+        {content}
+        <Faq/>
       </div>
         <Footer />
     </div> 
